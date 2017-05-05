@@ -1,0 +1,193 @@
+﻿<Page x:Class="ProjectShop.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjectShop"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="750"
+     
+      Title="Page1" >
+
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.6*"/>
+
+        </Grid.RowDefinitions>
+        
+        <!--podkreślenie tytułu-->
+        <StackPanel Grid.Row="0" Height="0,75" >
+            <Label Content="Shop" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" FontSize="30"/>
+
+        </StackPanel>
+        <Border BorderBrush="#FF1986D1" BorderThickness="0.5" 
+                VerticalAlignment="Bottom"/>
+
+
+        <!--Drugi wiersz i jego podział-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Label  Content="Choose Category: " Grid.Column="0"  
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    FontSize="15"/>
+           
+            <ComboBox Name="ChooseCategoryComboBox" Grid.Column="1" Height="30"
+                      Width="170" HorizontalAlignment="Center" FontSize="15" 
+                      SelectionChanged="ChooseCategoryComboBox_SelectionChanged"/>
+
+           
+            <Label  Content="Choose item: " Grid.Column="2" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    FontSize="15"/>
+           
+            <ComboBox Name="ChooseItemComboBox" Grid.Column="3" Height="30"
+                      Width="170" HorizontalAlignment="Center" FontSize="15" 
+                      SelectionChanged="ChooseItemComboBox_SelectionChanged" />
+
+        </Grid>
+        <!--Trzeci wiersz i jego podział-->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.15*" />
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+               
+
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" 
+                        Orientation="Horizontal">
+               
+                <Label Content="Mark:"  FontSize="15"  Margin="5,5,5,5" 
+                       Grid.Row="0"/>
+               
+                <TextBlock Name="TextBlockMark"  FontSize="15"  Margin="0,11,5,5"
+                           Grid.Row="0"/>
+
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" 
+                        Orientation="Horizontal">
+               
+                <Label Content="Producent:"  FontSize="15" Margin="5,5,5,5" 
+                       Grid.Row="0"/>
+              
+                <TextBlock Name="TextBlockProducent" FontSize="15"  
+                           Margin="0,11,5,5" Grid.Row="0"/>
+
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" 
+                        Orientation="Horizontal">
+               
+                <Label Content="Size :"  FontSize="15" Margin="5,5,5,5"/>
+                
+                <ComboBox Name="SizeComboBox"   Width="110" FontSize="15" 
+                          Height="30" Margin="0,-10,0,0"/>
+            </StackPanel>
+
+                <Label Content="Price in $ for pare or 1kg:" Grid.Column="0" 
+                       Grid.Row="2" FontSize="15" Margin="5,5,5,5" 
+                       HorizontalAlignment="Left"/>
+               
+                <TextBlock Name="TextBlockPrice" HorizontalAlignment="Left"  
+                           Margin="0,10"  FontSize="15" Grid.Column="1" 
+                           Grid.Row="2" />
+            
+            
+            
+            <StackPanel Grid.Column="2"  Grid.Row="0" HorizontalAlignment="Left"
+                        Orientation="Horizontal">
+               
+                <Label Content="Quantity:"  FontSize="15"  Margin="5,5,5,5"/>
+                <TextBox x:Name="TextBoxQuantity" FontSize="15" Width="90" 
+                         Height="25" Margin="5,-10,0,0"   />
+            </StackPanel>
+
+            <StackPanel Grid.Column="3" Grid.Row="0"  HorizontalAlignment="Left" 
+                        Orientation="Horizontal" >
+                
+                <Label Content="Color:"  FontSize="15"  Margin="5,5,5,5"
+                       Grid.Row="0"/>
+                
+                <ComboBox x:Name="ColorComboBox" Width="93" FontSize="15"
+                          Height="30" Margin="10,-10,0,0" />
+            </StackPanel>
+            
+            
+            <StackPanel Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left" Orientation="Horizontal" >
+                
+                <Label Content="Extra Warrenty Year - cost:10$ "  FontSize="15" />
+               </StackPanel>
+           
+            <CheckBox Name="CheckBoxButton" Grid.Column="1" Grid.Row="3" 
+                      VerticalAlignment="Bottom" HorizontalAlignment="Left" 
+                      Margin="10,8,10,6" IsChecked="True"  />
+
+        </Grid>
+
+        <!--Elementy dodane do koszyka-->
+        <ListView Name="ListView1" Grid.Row="3" ItemsSource="{Binding  
+            ProductChosenList}"  BorderBrush="#FF1986D1"  >
+            
+            <ListView.View >
+                <GridView >
+                   
+                    <GridViewColumn Header="Name" Width="60" 
+                                    DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Price" Width="60"
+                                    DisplayMemberBinding="{Binding Price}" />
+                    <GridViewColumn Header="Quantity" Width="60"
+                                    DisplayMemberBinding="{Binding Quantity}" />
+                    <GridViewColumn Header="Color"  Width="60"
+                                    DisplayMemberBinding="{Binding Color}" />
+                    <GridViewColumn Header="Producent"  Width="70"
+                                    DisplayMemberBinding="{Binding Producent}"/>
+                    <GridViewColumn Header="Size"  Width="75" 
+                                    DisplayMemberBinding="{Binding SizeItem}" />
+                    <GridViewColumn Header="Extra Warrenty Elements"  Width="150" 
+                                    DisplayMemberBinding
+                                    ="{Binding WithWarrentyElementsCounter}" />
+
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+   
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Exit" Name="ExitButton"  FontSize="15" Margin="10"  Grid.Column="0" Click="ExitButton_Click"/>
+            <Button Content="Add Item" Name="AddItemButton"  FontSize="15" Margin="10" Grid.Column="1" Click="AddItemButton_Click" IsDefault="True"/>
+            <Button Content="Delete Item" Name="DeleteItemButton"  FontSize="15" Margin="10" Grid.Column="2" Click="DeleteItemButton_Click" />
+            <Button Content="Next" Name="OrderButton"  FontSize="15" Margin="10" Grid.Column="3" Click="NextPageButton_Click"/>
+        </Grid>
+    </Grid>
+</Page>
