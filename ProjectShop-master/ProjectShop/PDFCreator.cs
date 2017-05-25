@@ -6,13 +6,22 @@ using System.IO;
 
 namespace ProjectShop
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za zapis danych użytkownika oraz końcowego zamówienia do pliku PDF.
+    /// Klasa wykorzystuje zewnętrzną bibliotekę "itextsharp.dll".
+    /// </summary>
     public static class PdfCreator
     {
+        /// <summary>
+        /// Konstruktor klasy odpowiedzialnej za zapis zamówienia do pliku PDF.
+        /// </summary>
+        /// <param name="T">Lista produktów wybranych przez użytkownika.</param>
+        /// <param name="person">Dane użytkowniak do zamówienia.</param>
         public static void PDF_Creator(ObservableCollection<Product> T, Person person)
         {
            
               var control = new Control();
-               var path = IfExistFile();
+              var path = IfExistFile();
 
 
                Document doc = new Document(PageSize.LETTER, 10, 10, 42, 35);
