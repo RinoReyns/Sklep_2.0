@@ -71,7 +71,7 @@ namespace ProjectShop
     public class Boot : Product
     {
         /// <summary>
-        /// Kontruktor klasy Boot
+        /// Konstruktor klasy Boot
         /// </summary>
         public Boot()
         {
@@ -91,7 +91,7 @@ namespace ProjectShop
     public class Shoes : Product
     {
         /// <summary>
-        /// Kontruktor klasy Shoes
+        /// Konstruktor klasy Shoes
         /// </summary>
         public Shoes()
         {
@@ -111,7 +111,7 @@ namespace ProjectShop
     public class Dress: Product
     {
         /// <summary>
-        /// Kontruktor klasy Dress
+        /// Konstruktor klasy Dress
         /// </summary>
         public Dress()
         {
@@ -129,7 +129,7 @@ namespace ProjectShop
     public class Micro : Product
     {
         /// <summary>
-        /// Kontruktor klasy Micro
+        /// Konstruktor klasy Micro
         /// </summary>
         public Micro()
         {
@@ -146,7 +146,7 @@ namespace ProjectShop
     public class Nails : Product
     {
         /// <summary>
-        /// Kontruktor klasy Nails
+        /// Konstruktor klasy Nails
         /// </summary>
         public Nails()
         {
@@ -181,7 +181,7 @@ namespace ProjectShop
     public class Table : Product
     {
         /// <summary>
-        /// Kontruktor klasy Table
+        /// Konstruktor klasy Table
         /// </summary>
         public Table()
         {
@@ -201,7 +201,7 @@ namespace ProjectShop
     public class Door : Product
     {
         /// <summary>
-        /// Kontruktor klasy Door
+        /// Konstruktor klasy Door
         /// </summary>
         public Door()
         {
@@ -219,7 +219,7 @@ namespace ProjectShop
     public class Cd : Product
     {
         /// <summary>
-        /// Kontruktor klasy CD
+        /// Konstruktor klasy CD
         /// </summary>
         public Cd()
         {
@@ -236,7 +236,7 @@ namespace ProjectShop
     public class Guitar : Product
     {
         /// <summary>
-        /// Kontruktor klasy Guitar
+        /// Konstruktor klasy Guitar
         /// </summary>
         public Guitar()
         {
@@ -255,7 +255,7 @@ namespace ProjectShop
     public class Amp : Product
     {
         /// <summary>
-        /// Kontruktor klasy Amp
+        /// Konstruktor klasy Amp
         /// </summary>
         public Amp()
         {

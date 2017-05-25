@@ -6,13 +6,22 @@ using System.Windows.Controls;
 
 namespace ProjectShop
 {
-    
+    /// <summary>
+    /// Strona umożliwia wybór produktów przez użytkownika.
+    /// </summary>
     public partial class Page1 : Page
     {
+        /// <summary>
+        /// Lista produktów wyświetlana jako kosztyk użytkownika w alikacji.
+        /// </summary>
         public ObservableCollection<Product> ProductChosenList { get; set; }
         private Control _control = new Control();
         private List<Product> _pro = new List<Product>();
 
+        /// <summary>
+        /// Konstruktor klasy Page1
+        /// </summary>
+        /// <param name="T">Lista produktów wybranych przez użytkownika</param>
         public Page1(ObservableCollection<Product> T)
         {
             InitializeComponent();
