@@ -2,22 +2,61 @@
 
 namespace ProjectShop
 {
+    /// <summary>
+    /// Klasa abstrakcyjna, która w kolejnych wersjach zostanie wykorzystana jako jako ViewModel, na który zostaną zrzutowane wartości z bazy danych.
+    /// Klas dziedziczy po interfejsie ICount.
+    /// </summary>
     public abstract class Product : ICount
     {
+        /// <summary>
+        /// Nazwa produktu
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Cena produktu
+        /// </summary>
         public double Price { get; set; }
+        /// <summary>
+        /// Ilość produktów
+        /// </summary>
         public int Quantity { get; set; }
+        /// <summary>
+        /// Kolor produktu
+        /// </summary>
         public string Color { get; set; }
+        /// <summary>
+        /// Poducent produktu
+        /// </summary>
         public string Producent { get; set; }
+        /// <summary>
+        /// Lista rozmiarów/ wielkości dostępnych produktów, w zależności od danych zapisanych w bazie danych.
+        /// </summary>
         public List<string> Size = new List<string>();
+        /// <summary>
+        /// Rozmiar wybranego produktu
+        /// </summary>
         public string SizeItem { get; set; }
+        /// <summary>
+        /// Dodatkowa cena, przy ubezpieczeniu produktu
+        /// </summary>
         public int WithWarrentyElementsCounter { get; set; }
-        public Product()
+
+        /// <summary>
+        /// Konstruktor klasy, podczas tworzenia obiektu dziedziczącego po klasie Product, który nadaje wartości domyślne konkretnym propercjom.
+        /// </summary>
+        protected Product()
         {
             this.Quantity = 1;
             this.Color = "1";
             this.WithWarrentyElementsCounter = 0;
         }
+        /// <summary>
+        /// Definicja działania metody Count zawartej w interfejsie ICount, po którym dziedziczy klasa Product.
+        /// </summary>
+        /// <param name="quantity"></param>
+        /// <param name="price"></param>
+        /// <param name="checkbox"></param>
+        /// <returns></returns>
         public virtual double Count(int quantity, double price, bool? checkbox)
         {
             if (checkbox == true)            
