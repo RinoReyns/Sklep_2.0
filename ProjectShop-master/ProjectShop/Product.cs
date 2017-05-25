@@ -53,10 +53,10 @@ namespace ProjectShop
         /// <summary>
         /// Definicja działania metody Count zawartej w interfejsie ICount, po którym dziedziczy klasa Product.
         /// </summary>
-        /// <param name="quantity"></param>
-        /// <param name="price"></param>
-        /// <param name="checkbox"></param>
-        /// <returns></returns>
+        /// <param name="quantity">Liczba produktów.</param>
+        /// <param name="price">Cena jednostkowa produktu.</param>
+        /// <param name="checkbox">Parametr mówiący o wymaganiu gwarancji przez użytkownika dla konkretnego produktu.</param>
+        /// <returns> Funkcja zwraca obliczoną wersję produktów.</returns>
         public virtual double Count(int quantity, double price, bool? checkbox)
         {
             if (checkbox == true)            

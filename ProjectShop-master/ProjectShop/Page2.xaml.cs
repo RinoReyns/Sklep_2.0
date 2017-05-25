@@ -6,11 +6,25 @@ using System.Windows.Controls;
 
 namespace ProjectShop
 {
+    /// <summary>
+    /// Strona umożliwia wporwadzenie danych użytkownika potrzebnych do zamówienia.
+    /// </summary>
     public partial class Page2 : Page
     {
+        /// <summary>
+        /// Lista produktów wyświetlana jako kosztyk użytkownika w alikacji.
+        /// </summary>
         public ObservableCollection<Product> ProductChosenList { get; set; }
+        /// <summary>
+        /// Obiekt klasy osoba, który przechowuje dane użytkownika potrzebne do zamówienia.
+        /// </summary>
         public Person Person;
 
+        /// <summary>
+        /// Kontruktor klasy Page2
+        /// </summary>
+        /// <param name="T"> Lista produktów wybranych przez użytkownika.</param>
+        /// <param name="p"> Dane użytkownika</param>
         public Page2(ObservableCollection<Product> T, Person p)
         {
             InitializeComponent();
