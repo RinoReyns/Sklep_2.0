@@ -5,7 +5,7 @@ using System.Windows;
 namespace ProjectShop
 {
     /// <summary>
-    /// Główne okno projektu, w który zmienane są  kolejne strony w zależności od interakcji użytkownika.
+    /// Główne okno projektu, w który zmieniane są  kolejne strony w zależności od interakcji użytkownika.
     /// </summary>
     public partial class MainWindow : Window
     {

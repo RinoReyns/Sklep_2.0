@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 namespace ProjectShop
 {
     /// <summary>
-    /// Klasa odpowiedzialna za obługę koszyka użytkownika, oraz obliczania końcowej ceny. 
+    /// Klasa odpowiedzialna za obługę koszyka użytkownika, oraz obliczanie końcowej ceny. 
     /// </summary>
     public class Control
     {
@@ -13,8 +13,8 @@ namespace ProjectShop
         /// Funkcja sprawdza czy na liście produktów o takiej samej nazwie jak nazwa produktu wybranego przez użytkownika.
         /// </summary>
         /// <param name="T"> Lista wybranych produktów przez użytkownika</param>
-        /// <param name="productName"></param>
-        /// <returns></returns>
+        /// <param name="productName">Nazwa produktu wybranego przez użytkownika</param>
+        /// <returns> Funkcja zwraca "1" jeżeli produkt został dodany do listy oraz "0" jeżeli istaniał już na liście.</returns>
         public int Check(List<Product> T, string productName)
         {
             foreach (var products in T)
@@ -29,9 +29,9 @@ namespace ProjectShop
         /// Funckja przeszukuję listę produktów dodanych do koszyka o takich samych parametrach jak parametry wybrane przez użytkownika. 
         /// </summary>
         /// <param name="T">Lista wybranych produktów przez użytkownika</param>
-        /// <param name="productName"></param>
-        /// <param name="productColor"></param>
-        /// <param name="productSize"></param>
+        /// <param name="productName">Nazwa produktu</param>
+        /// <param name="productColor">Kolor produktu</param>
+        /// <param name="productSize">Rozmiar produktu</param>
         /// <returns>Zwraca indeks elementu o takich samych parametrach jak te, które wybrał użytkownik. W przeciwnym razie zwraca
         /// wartość, która jest interpretowana jako brak takiego produktu na liście.</returns>
         public int Check(ObservableCollection<Product> T, string productName, string productColor, string productSize)

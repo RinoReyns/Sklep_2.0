@@ -2,17 +2,28 @@
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace ProjectShop
 {
-   
+   /// <summary>
+   /// Strona, na której prezentowane są wybrane przez użytkowniaka produkty oraz jego dane podane do zamówienia.
+   /// </summary>
     public partial class Page3 : Page
     {
+        /// <summary>
+        /// Lista produktów dodanych do koszyka przez użytkownika.
+        /// </summary>
         public ObservableCollection<Product> ProductChosenList { get; set; }
         private Control _control;
+        /// <summary>
+        /// Zmiena klasy Person, która przechowuje dane użytkownika.
+        /// </summary>
         public Person Person;
-
+        /// <summary>
+        /// Konstruktor strony, na której prezentowane są wybrane przez użytkowniaka produkty oraz jego dane podane do zamówienia.
+        /// </summary>
+        /// <param name="T"> Lista produktów </param>
+        /// <param name="p">Dane użytkownika</param>
         public Page3(ObservableCollection<Product> T, Person p)
         {
             InitializeComponent();
@@ -26,7 +37,7 @@ namespace ProjectShop
             this.TelephoneLabel.Content = Person.Telephone;
             this.FinalPriceLabel.Content = _control.FinalPrice(ProductChosenList);
         }
-
+       
         private void FinishShopping_Click(object sender, RoutedEventArgs e)
         {
             try
