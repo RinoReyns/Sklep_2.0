@@ -10,8 +10,8 @@ namespace ProjectShop
     public partial class Page1 : Page
     {
         public ObservableCollection<Product> ProductChosenList { get; set; }
-        private Control Control = new Control();
-        private List<Product> Pro = new List<Product>();
+        private Control _control = new Control();
+        private List<Product> _pro = new List<Product>();
 
         public Page1(ObservableCollection<Product> T)
         {
@@ -38,20 +38,20 @@ namespace ProjectShop
             try
             {
                 string valueFromChooseItemComboBox = this.ChooseItemComboBox.SelectedValue.ToString();
-                if (Control.check(Pro, valueFromChooseItemComboBox) == 0)
-                    Pro.Add((Product)Activator.CreateInstance(Type.GetType("ProjectShop." + valueFromChooseItemComboBox)));
+                if (_control.Check(_pro, valueFromChooseItemComboBox) == 0)
+                    _pro.Add((Product)Activator.CreateInstance(Type.GetType("ProjectShop." + valueFromChooseItemComboBox)));
 
-                foreach (var Item in Pro)
+                foreach (var item in _pro)
                 {
-                    if (0 == (String.Compare(valueFromChooseItemComboBox, Item.Name)))
+                    if (0 == (String.Compare(valueFromChooseItemComboBox, item.Name)))
                     {
-                        this.TextBlockMark.Text = Item.Name;
-                        this.TextBlockPrice.Text = Item.Price.ToString();
-                        this.TextBoxQuantity.Text = Item.Quantity.ToString();
-                        this.TextBlockProducent.Text = Item.Producent;
-                        this.SizeComboBox.ItemsSource = Item.Size;
+                        this.TextBlockMark.Text = item.Name;
+                        this.TextBlockPrice.Text = item.Price.ToString();
+                        this.TextBoxQuantity.Text = item.Quantity.ToString();
+                        this.TextBlockProducent.Text = item.Producent;
+                        this.SizeComboBox.ItemsSource = item.Size;
                         this.SizeComboBox.SelectedIndex = 0;
-                        if (0 ==(String.Compare("0",Item.Color)))
+                        if (0 ==(String.Compare("0",item.Color)))
                         {
                             this.ColorComboBox.ItemsSource = Enum.GetValues(typeof(ColorBlack));
                             this.ColorComboBox.SelectedIndex = 0;
@@ -80,7 +80,7 @@ namespace ProjectShop
                 bool? check = this.CheckBoxButton.IsChecked;
                 Product item = (Product)Activator.CreateInstance(Type.GetType("ProjectShop." + valueFromChooseItemComboBox));
                 item.SizeItem = this.SizeComboBox.SelectedValue.ToString();
-                int existingOfElement = Control.check(ProductChosenList, valueFromChooseItemComboBox,valueFromColorComboBox, item.SizeItem);
+                int existingOfElement = _control.Check(ProductChosenList, valueFromChooseItemComboBox,valueFromColorComboBox, item.SizeItem);
             
 
                 if (noExist == existingOfElement )

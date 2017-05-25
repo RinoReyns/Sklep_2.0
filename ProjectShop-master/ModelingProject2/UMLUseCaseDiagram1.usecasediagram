@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="374089b7-7933-4bc4-a85c-2b1c1c5c0b05" name="UMLUseCaseDiagram1" linkedPackageId="712f122a-2331-4551-b8a7-763c218568eb" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="7636af69-d813-4374-a160-1a0c6b33e041">
+      <elementDefinition Id="22943438-f616-4cba-b0f7-8289a7fd1db3" />
+      <body>Jeżeli jakikolwiek produkt jest w koszyku</body>
+      <annotatedElements>
+        <useCaseMoniker Id="7603ec30-5763-42a6-a60b-942528e3abd1" LastKnownName="Usunięcie produktu z koszyka" />
+      </annotatedElements>
+    </comment>
+    <comment Id="9a56642d-51bd-43e2-bdf9-0e7efe8e44ea">
+      <elementDefinition Id="a2ab0049-6e1b-43eb-97ed-8302af4d79a8" />
+      <body>Gdy został wybrany jakikolwiek produkt</body>
+      <annotatedElements>
+        <useCaseMoniker Id="854c7e2a-8716-4e3c-bf19-18c9c60e1757" LastKnownName="Podanie danych osobowych" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="ec27f35a-b778-4901-9501-10cf442510da" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="383fe2a5-e92b-4ccb-9de1-8b653cb8740c" />
+        <targetEnds>
+          <association Id="19acabdc-980e-4103-ba22-3d14e1511088" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Wybór produktu" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fa092960-15bf-45d0-bf85-df9d56d86624" LastKnownName="Wybór produktu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0c4bd5fa-e2e7-4e61-9882-7bad3508f19e" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="794ba82e-29b5-4d43-a70b-194681c17839" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7437a47c-d456-43e8-a0b0-5218d7e7027a" name="Wybór produktu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="209ea0e3-8760-4db4-b5e3-3e8ce22ed5bb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="af0d6afb-fd37-46e2-9cf1-1ead937f86e8" />
+          </association>
+          <association Id="f2a39dc9-e802-4067-8ae3-90c55cfd5acd" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Zakończenie działania programu" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0712daa8-d742-48c8-bd4d-7f26e8ff028e" LastKnownName="Zakończenie działania programu bez dokonania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5eeb70d2-0587-4835-8342-da16ea9a00b2" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="557a1817-dc90-4691-9b23-0d6e94d384a5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dbf8bde1-315e-4d8e-a7c5-ffa1d80a6160" name="Zakończenie działania programu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="717c8e83-db21-46c3-a26d-e4c0088f3806" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4db8a4a9-a3ea-4491-9822-671d216afd71" />
+          </association>
+          <association Id="32ab6cd8-e8be-4d8c-8f62-f08ecc7e32dd" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Podanie danych osobowych" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="854c7e2a-8716-4e3c-bf19-18c9c60e1757" LastKnownName="Podanie danych osobowych" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="94519664-af34-462b-ad22-a5ce83d0b3ac" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a3b8cef8-3568-4429-9111-ea3bec4999f4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="54c347fb-c08e-4853-ad33-0c63a846a90d" name="Podanie danych osobowych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ca54aade-ae82-4afb-948b-6f71c091f645" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d01ec1d2-6f1b-4946-8b01-eb0c42069b15" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fa092960-15bf-45d0-bf85-df9d56d86624" name="Wybór produktu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="de5e792b-0a4e-403c-90d2-3ab05f3b4d48" />
+        <suppliersInternal>
+          <dependency Id="5e5e257e-2397-413f-a70f-0f275dcf4a72">
+            <useCaseMoniker Id="854c7e2a-8716-4e3c-bf19-18c9c60e1757" LastKnownName="Podanie danych osobowych" />
+            <elementDefinition Id="5020d8c5-7ade-44b6-b8ea-2081e45006b2" />
+          </dependency>
+        </suppliersInternal>
+        <additions>
+          <include Id="a20db77f-9eb6-4a5b-961a-6dbea58ccf30">
+            <useCaseMoniker Id="d242c3ba-5b8e-4d58-a9b0-04e5d913614c" LastKnownName="Dodanie produktu do koszyka" />
+            <elementDefinition Id="34f0f651-e4ac-42b8-bbad-03091bae1b4a" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d242c3ba-5b8e-4d58-a9b0-04e5d913614c" name="Dodanie produktu do koszyka" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f360a026-edd0-479e-aed8-bcb2e48ed96a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7603ec30-5763-42a6-a60b-942528e3abd1" name="Usunięcie produktu z koszyka" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="17c532be-471c-4e4d-ad3c-52ac8e772e87" />
+        <extendedCases>
+          <extend Id="8d556587-8372-429c-bd99-ff0012afa40d">
+            <useCaseMoniker Id="fa092960-15bf-45d0-bf85-df9d56d86624" LastKnownName="Wybór produktu" />
+            <elementDefinition Id="cbf8c59c-1b35-4ecb-8b8e-38507fbc9000" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0712daa8-d742-48c8-bd4d-7f26e8ff028e" name="Zakończenie działania programu bez dokonania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b5a7b60b-3478-4793-ae45-20414c83c593" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="854c7e2a-8716-4e3c-bf19-18c9c60e1757" name="Podanie danych osobowych" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c0fa9bd2-a3a5-4f9e-b2a4-b8d512679e69" />
+        <suppliersInternal>
+          <dependency Id="16bc8e57-2bef-4aee-b5e3-c2ae688e9c49">
+            <useCaseMoniker Id="0eb4a17c-ace3-40fa-b950-a343d2e7b1de" LastKnownName="Relizacja zamówienia" />
+            <elementDefinition Id="8f7f61fb-dd0d-4a35-bbbc-94692217f467" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="8022ae85-c143-49b9-aa4f-0a951818ae17" isDerived="false" sourceEndRoleName="Podanie danych osobowych" targetEndRoleName="Zakończenie działania programu bez dokonania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0712daa8-d742-48c8-bd4d-7f26e8ff028e" LastKnownName="Zakończenie działania programu bez dokonania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="873db4a8-ca9e-484f-81e4-d73ed41763f7" name="Podanie danych osobowych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="58f411dd-ef2a-4545-bc36-675393f3e9a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="14d44a63-a49d-4c2a-92fe-dc5d4ad6e622" name="Zakończenie działania programu bez dokonania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1b332264-969d-47f4-a0b7-a2ec49112c4b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="eb638865-9506-447d-a0b6-b370db2af9ce" />
+          </association>
+          <association Id="a0fe23dc-b2aa-4ab1-8fb5-b71bdfea60b5" isDerived="false" sourceEndRoleName="Podanie danych osobowych" targetEndRoleName="Wybór produktu" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fa092960-15bf-45d0-bf85-df9d56d86624" LastKnownName="Wybór produktu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="756b2638-16c1-4bbb-aa64-78798c80edd4" name="Podanie danych osobowych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="edcd4063-7391-4afa-958a-090243cd0bd9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b9169de-0764-41fa-8557-465659777843" name="Wybór produktu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="475d745c-4cf3-4847-a05a-1696c5740dd3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1f4851c4-91f2-4a8f-adb0-0654c8ffd570" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0eb4a17c-ace3-40fa-b950-a343d2e7b1de" name="Relizacja zamówienia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9c589f8c-059f-46dc-9174-7cddeae991d3" />
+        <additions>
+          <include Id="b901f565-9615-4cf0-9442-f85dc132eefa">
+            <useCaseMoniker Id="1c70724f-c029-482b-8140-69c2dbc7ad8e" LastKnownName="Zakończenie działania programu " />
+            <elementDefinition Id="a64efd6f-4243-4c9b-8e70-db11960874dc" />
+          </include>
+          <include Id="3b914644-0b37-46f6-bcee-13b941a68ccc">
+            <useCaseMoniker Id="52a1b519-8609-4ccb-ac08-e04d120e0b3b" LastKnownName="Wydruk zamówienia do pliku PDF" />
+            <elementDefinition Id="2b32d6cc-9330-4b58-a408-8b300df281de" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="52a1b519-8609-4ccb-ac08-e04d120e0b3b" name="Wydruk zamówienia do pliku PDF" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d6fdd9a7-f52c-4a65-92f2-36aae5d6b9df" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1c70724f-c029-482b-8140-69c2dbc7ad8e" name="Zakończenie działania programu " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58cb1d87-b3b1-4a78-8c87-684305971b98" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="712f122a-2331-4551-b8a7-763c218568eb" name="ModelingProject2">
+    <elementDefinition Id="8afb9798-f3f8-43ca-a2af-53f4714f3746" />
+    <profileInstances>
+      <packageHasProfileInstances Id="66f2d35f-c396-4397-a2e0-22051b7ad78e">
+        <profileInstance Id="35572803-c376-4dbc-aa53-a048606ce2da" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b94757c9-f2e6-48cb-98cb-1ef53dca1a92">
+        <profileInstance Id="db9292c1-e6df-4598-8d5c-04e4dae64e26" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

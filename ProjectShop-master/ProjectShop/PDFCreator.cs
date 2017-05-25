@@ -6,12 +6,12 @@ using System.IO;
 
 namespace ProjectShop
 {
-    public static class PDFCreator
+    public static class PdfCreator
     {
-        public static void PDF_Creator(ObservableCollection<Product> T, Person Person)
+        public static void PDF_Creator(ObservableCollection<Product> T, Person person)
         {
            
-              var Control = new Control();
+              var control = new Control();
                var path = IfExistFile();
 
 
@@ -30,13 +30,13 @@ namespace ProjectShop
                PdfPTable table = new PdfPTable(row);
 
                table.WidthPercentage = 100;
-               Paragraph paragraph = new Paragraph(" Name: " + Person.Name + "\n Surename: " + Person.Surename + "\n Address: " 
-                   + Person.Address + "\n Telephone: " + Person.Telephone + "\n",font2) { };
+               Paragraph paragraph = new Paragraph(" Name: " + person.Name + "\n Surename: " + person.Surename + "\n Address: " 
+                   + person.Address + "\n Telephone: " + person.Telephone + "\n",font2) { };
                paragraph.Alignment = 1;
                Paragraph paragraph2 = new Paragraph();
                paragraph2.SpacingBefore = 10f;
                paragraph2.SpacingAfter = 12f;
-               Paragraph paragraph3 = new Paragraph(" Final Price: " + Control.FinalPrice(T) + "$", font2);
+               Paragraph paragraph3 = new Paragraph(" Final Price: " + control.FinalPrice(T) + "$", font2);
 
 
                PdfPCell cell0 = new PdfPCell(new Phrase("Order", font2));

@@ -9,12 +9,12 @@
 
         public Person()
         {}
-        public Person(Person P)
+        public Person(Person p)
         {
-            this.Name = P.Name;
-            this.Surename = P.Surename;
-            this.Address = P.Address;
-            this.Telephone = P.Telephone;
+            this.Name = p.Name;
+            this.Surename = p.Surename;
+            this.Address = p.Address;
+            this.Telephone = p.Telephone;
         }
 
     }

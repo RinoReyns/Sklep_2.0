@@ -10,28 +10,28 @@ namespace ProjectShop
     public partial class Page3 : Page
     {
         public ObservableCollection<Product> ProductChosenList { get; set; }
-        private Control Control;
+        private Control _control;
         public Person Person;
 
-        public Page3(ObservableCollection<Product> T, Person P)
+        public Page3(ObservableCollection<Product> T, Person p)
         {
             InitializeComponent();
             ProductChosenList = new ObservableCollection<Product>(T);
-            Control = new Control();
-            Person = new Person(P);
+            _control = new Control();
+            Person = new Person(p);
             this.DataContext = this;
             this.NameLabel.Content = Person.Name;
             this.SurenameLabel.Content = Person.Surename;
             this.AddressLabel.Content = Person.Address;
             this.TelephoneLabel.Content = Person.Telephone;
-            this.FinalPriceLabel.Content = Control.FinalPrice(ProductChosenList);
+            this.FinalPriceLabel.Content = _control.FinalPrice(ProductChosenList);
         }
 
         private void FinishShopping_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                PDFCreator.PDF_Creator(ProductChosenList, Person);
+                PdfCreator.PDF_Creator(ProductChosenList, Person);
             }
            catch (System.IO.FileNotFoundException )
             {

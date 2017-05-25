@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="8afb9798-f3f8-43ca-a2af-53f4714f3746"
+  name="ModelingProject2" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="22943438-f616-4cba-b0f7-8289a7fd1db3">
+      <body>Jeżeli jakikolwiek produkt jest w koszyku</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="17c532be-471c-4e4d-ad3c-52ac8e772e87"
+          LastKnownName="Usunięcie produktu z koszyka"
+          LastKnownLocation="ModelingProject2.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="a2ab0049-6e1b-43eb-97ed-8302af4d79a8">
+      <body>Gdy został wybrany jakikolwiek produkt</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="c0fa9bd2-a3a5-4f9e-b2a4-b8d512679e69"
+          LastKnownName="Podanie danych osobowych"
+          LastKnownLocation="ModelingProject2.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="383fe2a5-e92b-4ccb-9de1-8b653cb8740c"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="af0d6afb-fd37-46e2-9cf1-1ead937f86e8"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Wybór produktu"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="de5e792b-0a4e-403c-90d2-3ab05f3b4d48"
+              LastKnownName="Wybór produktu"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="794ba82e-29b5-4d43-a70b-194681c17839"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="209ea0e3-8760-4db4-b5e3-3e8ce22ed5bb"
+                  name="Wybór produktu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4db8a4a9-a3ea-4491-9822-671d216afd71"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Zakończenie działania programu"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b5a7b60b-3478-4793-ae45-20414c83c593"
+              LastKnownName="Zakończenie działania programu bez dokonania"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="557a1817-dc90-4691-9b23-0d6e94d384a5"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="717c8e83-db21-46c3-a26d-e4c0088f3806"
+                  name="Zakończenie działania programu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d01ec1d2-6f1b-4946-8b01-eb0c42069b15"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Podanie danych osobowych"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c0fa9bd2-a3a5-4f9e-b2a4-b8d512679e69"
+              LastKnownName="Podanie danych osobowych"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a3b8cef8-3568-4429-9111-ea3bec4999f4"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca54aade-ae82-4afb-948b-6f71c091f645"
+                  name="Podanie danych osobowych"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="de5e792b-0a4e-403c-90d2-3ab05f3b4d48"
+        name="Wybór produktu"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="5020d8c5-7ade-44b6-b8ea-2081e45006b2">
+            <useCaseMoniker
+              Id="c0fa9bd2-a3a5-4f9e-b2a4-b8d512679e69"
+              LastKnownName="Podanie danych osobowych"
+              LastKnownLocation="ModelingProject2.uml" />
+          </dependency>
+        </suppliersInternal>
+        <additions>
+          <include
+            Id="34f0f651-e4ac-42b8-bbad-03091bae1b4a">
+            <useCaseMoniker
+              Id="f360a026-edd0-479e-aed8-bcb2e48ed96a"
+              LastKnownName="Dodanie produktu do koszyka"
+              LastKnownLocation="ModelingProject2.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f360a026-edd0-479e-aed8-bcb2e48ed96a"
+        name="Dodanie produktu do koszyka"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="17c532be-471c-4e4d-ad3c-52ac8e772e87"
+        name="Usunięcie produktu z koszyka"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="cbf8c59c-1b35-4ecb-8b8e-38507fbc9000">
+            <useCaseMoniker
+              Id="de5e792b-0a4e-403c-90d2-3ab05f3b4d48"
+              LastKnownName="Wybór produktu"
+              LastKnownLocation="ModelingProject2.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b5a7b60b-3478-4793-ae45-20414c83c593"
+        name="Zakończenie działania programu bez dokonania"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c0fa9bd2-a3a5-4f9e-b2a4-b8d512679e69"
+        name="Podanie danych osobowych"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="8f7f61fb-dd0d-4a35-bbbc-94692217f467">
+            <useCaseMoniker
+              Id="9c589f8c-059f-46dc-9174-7cddeae991d3"
+              LastKnownName="Relizacja zamówienia"
+              LastKnownLocation="ModelingProject2.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="eb638865-9506-447d-a0b6-b370db2af9ce"
+            isDerived="false"
+            sourceEndRoleName="Podanie danych osobowych"
+            targetEndRoleName="Zakończenie działania programu bez dokonania"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b5a7b60b-3478-4793-ae45-20414c83c593"
+              LastKnownName="Zakończenie działania programu bez dokonania"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="58f411dd-ef2a-4545-bc36-675393f3e9a1"
+                  name="Podanie danych osobowych"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1b332264-969d-47f4-a0b7-a2ec49112c4b"
+                  name="Zakończenie działania programu bez dokonania"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1f4851c4-91f2-4a8f-adb0-0654c8ffd570"
+            isDerived="false"
+            sourceEndRoleName="Podanie danych osobowych"
+            targetEndRoleName="Wybór produktu"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="de5e792b-0a4e-403c-90d2-3ab05f3b4d48"
+              LastKnownName="Wybór produktu"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="edcd4063-7391-4afa-958a-090243cd0bd9"
+                  name="Podanie danych osobowych"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="475d745c-4cf3-4847-a05a-1696c5740dd3"
+                  name="Wybór produktu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9c589f8c-059f-46dc-9174-7cddeae991d3"
+        name="Relizacja zamówienia"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="a64efd6f-4243-4c9b-8e70-db11960874dc">
+            <useCaseMoniker
+              Id="58cb1d87-b3b1-4a78-8c87-684305971b98"
+              LastKnownName="Zakończenie działania programu "
+              LastKnownLocation="ModelingProject2.uml" />
+          </include>
+          <include
+            Id="2b32d6cc-9330-4b58-a408-8b300df281de">
+            <useCaseMoniker
+              Id="d6fdd9a7-f52c-4a65-92f2-36aae5d6b9df"
+              LastKnownName="Wydruk zamówienia do pliku PDF"
+              LastKnownLocation="ModelingProject2.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d6fdd9a7-f52c-4a65-92f2-36aae5d6b9df"
+        name="Wydruk zamówienia do pliku PDF"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="58cb1d87-b3b1-4a78-8c87-684305971b98"
+        name="Zakończenie działania programu "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

@@ -11,11 +11,11 @@ namespace ProjectShop
         public ObservableCollection<Product> ProductChosenList { get; set; }
         public Person Person;
 
-        public Page2(ObservableCollection<Product> T, Person P)
+        public Page2(ObservableCollection<Product> T, Person p)
         {
             InitializeComponent();
             ProductChosenList = new ObservableCollection<Product>(T);
-            Person = new Person(P);
+            Person = new Person(p);
             this.NameTextBox.Text = Person.Name;
             this.SurenameTextBox.Text = Person.Surename;
             this.AddressTextBox.Text = Person.Address;

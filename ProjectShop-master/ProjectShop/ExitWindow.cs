@@ -4,12 +4,12 @@ namespace ProjectShop
 {
     public static class ExitWindow
     {
-        private static int onlyOneExitMessage { get; set; } = 0;
+        private static int OnlyOneExitMessage { get; set; } = 0;
         public static bool Exit(int i = 0)
         {
-            if (onlyOneExitMessage == 0)
+            if (OnlyOneExitMessage == 0)
             {
-                onlyOneExitMessage = i;
+                OnlyOneExitMessage = i;
                 MessageBoxResult result = MessageBox.Show("Do you really want to end your shopping without order?", "Exit", MessageBoxButton.YesNo, 
                     MessageBoxImage.Question);
 
@@ -19,7 +19,7 @@ namespace ProjectShop
                 }
                 else if (result == MessageBoxResult.No)
                 {
-                    onlyOneExitMessage = 0;
+                    OnlyOneExitMessage = 0;
                     return true;
                 }
             }

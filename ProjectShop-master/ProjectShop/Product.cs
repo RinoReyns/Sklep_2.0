@@ -130,9 +130,9 @@ namespace ProjectShop
             Size.Add("3x3 m");  
         }
     }
-    public class CD : Product
+    public class Cd : Product
     {
-        public CD()
+        public Cd()
         {
             this.Name = "CD";
             this.Price = 29.99;
@@ -156,9 +156,9 @@ namespace ProjectShop
         }
     }
 
-    public class AMP : Product
+    public class Amp : Product
     {
-        public AMP()
+        public Amp()
         {
             this.Name = "AMP";
             this.Price = 13000;
