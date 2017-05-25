@@ -65,8 +65,14 @@ namespace ProjectShop
             return (quantity * price);
         }
     }
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu Boot stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Boot : Product
     {
+        /// <summary>
+        /// Kontruktor klasy Boot
+        /// </summary>
         public Boot()
         {
             this.Name = "Boot";
@@ -79,9 +85,14 @@ namespace ProjectShop
             Size.Add("42");
         }
     }
-
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu Shoes stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Shoes : Product
     {
+        /// <summary>
+        /// Kontruktor klasy Shoes
+        /// </summary>
         public Shoes()
         {
             this.Name = "Shoes";
@@ -94,8 +105,14 @@ namespace ProjectShop
             Size.Add("42");
         }
     }
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu Dress stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Dress: Product
     {
+        /// <summary>
+        /// Kontruktor klasy Dress
+        /// </summary>
         public Dress()
         {
             this.Name = "Dress";
@@ -106,9 +123,14 @@ namespace ProjectShop
             Size.Add("40");
         }
     }
-
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu Micro stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Micro : Product
     {
+        /// <summary>
+        /// Kontruktor klasy Micro
+        /// </summary>
         public Micro()
         {
             this.Name = "Micro";
@@ -118,9 +140,14 @@ namespace ProjectShop
             Size.Add("Lack of sizes");
         }
     }
-
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu Nails stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Nails : Product
     {
+        /// <summary>
+        /// Kontruktor klasy Nails
+        /// </summary>
         public Nails()
         {
             this.Name = "Nails";
@@ -132,7 +159,14 @@ namespace ProjectShop
             Size.Add("5 mm");
             Size.Add("10 mm");
         }
-     override  public double Count(int quantity, double price, bool? checkbox)
+        /// <summary>
+        /// Funkcja nadpisująca funkcję Count zaimplementowanej w abstrakcyjnej klasie Product.
+        /// </summary>
+        /// <param name="quantity"> Liczba produktów</param>
+        /// <param name="price">Cena za sztukę</param>
+        /// <param name="checkbox">Czy klien rząda dodatkowej gwarancji</param>
+        /// <returns>Funkcja zwraca obliczoną cenę wybranych produktów w zależności od liczby produktów oraz wybranych opcji</returns>
+     public override double Count(int quantity, double price, bool? checkbox)
         {
             if (checkbox == true)
                 return (((quantity * price) + quantity * 10)/2);
@@ -141,9 +175,14 @@ namespace ProjectShop
         }
 
     }
-
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu Table stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Table : Product
     {
+        /// <summary>
+        /// Kontruktor klasy Table
+        /// </summary>
         public Table()
         {
             this.Name = "Table";
@@ -156,9 +195,14 @@ namespace ProjectShop
             Size.Add("18x35 m");
         }
     }
-
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu Door stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Door : Product
     {
+        /// <summary>
+        /// Kontruktor klasy Door
+        /// </summary>
         public Door()
         {
             this.Name = "Door";
@@ -169,8 +213,14 @@ namespace ProjectShop
             Size.Add("3x3 m");  
         }
     }
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu CD stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Cd : Product
     {
+        /// <summary>
+        /// Kontruktor klasy CD
+        /// </summary>
         public Cd()
         {
             this.Name = "CD";
@@ -180,9 +230,14 @@ namespace ProjectShop
             Size.Add("Lack of sizes");
         }
     }
-
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu Guitar stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Guitar : Product
     {
+        /// <summary>
+        /// Kontruktor klasy Guitar
+        /// </summary>
         public Guitar()
         {
             this.Name = "Guitar";
@@ -194,9 +249,14 @@ namespace ProjectShop
             Size.Add(@"24.75'");
         }
     }
-
+    /// <summary>
+    /// Klasa odpowiedzialna za inicjalizacje poduktu Amp stworzona na potrzeby wersji demo, bez bazy danych.
+    /// </summary>
     public class Amp : Product
     {
+        /// <summary>
+        /// Kontruktor klasy Amp
+        /// </summary>
         public Amp()
         {
             this.Name = "AMP";
