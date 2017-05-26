@@ -223,7 +223,7 @@ namespace ProjectShop
         /// </summary>
         public Cd()
         {
-            this.Name = "CD";
+            this.Name = "Cd";
             this.Price = 29.99;
             this.Color = "0";
             this.Producent = "CDDrex";
@@ -259,7 +259,7 @@ namespace ProjectShop
         /// </summary>
         public Amp()
         {
-            this.Name = "AMP";
+            this.Name = "Amp";
             this.Price = 13000;
             this.Color = "1";
             this.Producent = "Marshall";
