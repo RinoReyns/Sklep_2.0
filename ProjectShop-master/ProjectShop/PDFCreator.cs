@@ -24,35 +24,36 @@ namespace ProjectShop
               var path = IfExistFile();
 
 
-               Document doc = new Document(PageSize.LETTER, 10, 10, 42, 35);
-               PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(path, FileMode.Create));
+               var doc = new Document(PageSize.LETTER, 10, 10, 42, 35);
+               var wri = PdfWriter.GetInstance(doc, new FileStream(path, FileMode.Create));
 
-               BaseFont arial = BaseFont.CreateFont(@"C:\WINDOWS\Fonts\arial.ttf", "iso-8859-2", BaseFont.EMBEDDED);
-               Font font = new Font(arial, 15f);
-               Font font2 = new Font(arial, 13f);
+               var arial = BaseFont.CreateFont(@"C:\WINDOWS\Fonts\arial.ttf", "iso-8859-2", BaseFont.EMBEDDED);
+               var font = new Font(arial, 15f);
+               var font2 = new Font(arial, 13f);
 
                doc.Open();
-               int row = 7;
-               PdfPTable table = new PdfPTable(row);
+               const int row = 7;
+               var table = new PdfPTable(row) {WidthPercentage = 100};
 
-               table.WidthPercentage = 100;
-               Paragraph paragraph = new Paragraph(" Name: " + person.Name + "\n Surename: " + person.Surename + "\n Address: " 
+               var paragraph = new Paragraph(" Name: " + person.Name + "\n Surename: " + person.Surename + "\n Address: " 
                    + person.Address + "\n Telephone: " + person.Telephone + "\n",font2) { };
                paragraph.Alignment = 1;
-               Paragraph paragraph2 = new Paragraph();
-               paragraph2.SpacingBefore = 10f;
-               paragraph2.SpacingAfter = 12f;
-               Paragraph paragraph3 = new Paragraph(" Final Price: " + control.FinalPrice(T) + "$", font2);
+               var paragraph2 = new Paragraph
+                {
+                    SpacingBefore = 10f,
+                    SpacingAfter = 12f
+                };
+                var paragraph3 = new Paragraph(" Final Price: " + control.FinalPrice(T) + "$", font2);
 
 
-               PdfPCell cell0 = new PdfPCell(new Phrase("Order", font2));
-               PdfPCell cell1 = new PdfPCell(new Phrase("Product", font2));
-               PdfPCell cell2 = new PdfPCell(new Phrase("Quantity", font2));
-               PdfPCell cell3 = new PdfPCell(new Phrase("Price", font2));
-               PdfPCell cell4 = new PdfPCell(new Phrase("Color", font2));
-               PdfPCell cell5 = new PdfPCell(new Phrase("Producent", font2));
-               PdfPCell cell6 = new PdfPCell(new Phrase("Size", font2));
-               PdfPCell cell7 = new PdfPCell(new Phrase("Extra warrenty", font2));
+                var cell0 = new PdfPCell(new Phrase("Order", font2));
+                var cell1 = new PdfPCell(new Phrase("Product", font2));
+                var cell2 = new PdfPCell(new Phrase("Quantity", font2));
+                var cell3 = new PdfPCell(new Phrase("Price", font2));
+                var cell4 = new PdfPCell(new Phrase("Color", font2));
+                var cell5 = new PdfPCell(new Phrase("Producent", font2));
+                var cell6 = new PdfPCell(new Phrase("Size", font2));
+                var cell7 = new PdfPCell(new Phrase("Extra warrenty", font2));
 
 
                cell0.BackgroundColor = new BaseColor(0, 200, 0);
@@ -72,13 +73,13 @@ namespace ProjectShop
 
                foreach (var item in T)
                {
-                   PdfPCell cellT1 = new PdfPCell(new Phrase(item.Name,font2));
-                   PdfPCell cellT2 = new PdfPCell(new Phrase(item.Quantity.ToString(),font2));
-                   PdfPCell cellT3 = new PdfPCell(new Phrase(item.Price.ToString(),font2));
-                   PdfPCell cellT4 = new PdfPCell(new Phrase(item.Color,font2));
-                   PdfPCell cellT5 = new PdfPCell(new Phrase(item.Producent,font2));
-                   PdfPCell cellT6 = new PdfPCell(new Phrase(item.SizeItem,font2));
-                   PdfPCell cellT7 = new PdfPCell(new Phrase(item.WithWarrentyElementsCounter.ToString(),font2));
+                   var cellT1 = new PdfPCell(new Phrase(item.Name,font2));
+                   var cellT2 = new PdfPCell(new Phrase(item.Quantity.ToString(),font2));
+                   var cellT3 = new PdfPCell(new Phrase(item.Price.ToString(),font2));
+                   var cellT4 = new PdfPCell(new Phrase(item.Color,font2));
+                   var cellT5 = new PdfPCell(new Phrase(item.Producent,font2));
+                   var cellT6 = new PdfPCell(new Phrase(item.SizeItem,font2));
+                   var cellT7 = new PdfPCell(new Phrase(item.WithWarrentyElementsCounter.ToString(),font2));
 
 
                    cellT1.HorizontalAlignment = cellT2.HorizontalAlignment = cellT3.HorizontalAlignment = cellT4.HorizontalAlignment = cellT5.HorizontalAlignment =
@@ -91,18 +92,14 @@ namespace ProjectShop
                    table.AddCell(cellT5);
                    table.AddCell(cellT6);
                    table.AddCell(cellT7);
-
                }
 
                doc.Add(paragraph);
                doc.Add(paragraph2);
                doc.Add(table);
-
                doc.Add(paragraph3);
                doc.Close();
                Process.Start(path);
-
-           
            }
             
         private static string IfExistFile()
@@ -121,7 +118,6 @@ namespace ProjectShop
                }
                while (numberOfOrder != -1);
                return path;
-           
         }
     }
 }
