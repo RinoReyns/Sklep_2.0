@@ -54,6 +54,8 @@
     <Compile Include="ControlTests.cs" />
     <Compile Include="ExitWindowTests.cs" />
     <Compile Include="NailsTests.cs" />
+    <Compile Include="PdfCreatorTests.cs" />
+    <Compile Include="PersonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

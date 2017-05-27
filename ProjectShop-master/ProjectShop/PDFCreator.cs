@@ -31,9 +31,6 @@ namespace ProjectShop
                Font font = new Font(arial, 15f);
                Font font2 = new Font(arial, 13f);
 
-
-
-
                doc.Open();
                int row = 7;
                PdfPTable table = new PdfPTable(row);

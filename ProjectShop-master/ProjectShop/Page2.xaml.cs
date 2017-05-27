@@ -45,14 +45,14 @@ namespace ProjectShop
         {
             try
             {
-                var regtele = new Regex(@"^[0-9]{5,9}$");
+                var regularexpretion = new Regex(@"^[0-9]{5,9}$");
 
                 if (String.IsNullOrEmpty(NameTextBox.Text) | String.IsNullOrEmpty(SurenameTextBox.Text) | String.IsNullOrEmpty(AddressTextBox.Text)
                     | String.IsNullOrEmpty(TelephoneTextBox.Text))
                 {
                     throw new InvalidOperationException("One or more of fields is empty.");
                 }
-                else if (!regtele.IsMatch(TelephoneTextBox.Text))
+                else if (!regularexpretion.IsMatch(TelephoneTextBox.Text))
                 {
                     throw new InvalidOperationException("The phone number is incorrect.");
                 }
