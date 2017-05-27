@@ -12,7 +12,7 @@ namespace ProjectShop.Tests
     public class ExitWindowTests
     {
         [TestMethod()]
-        public void ExitTestNo()
+        public void ExitTestFirstGo()
         {
             try
             {
@@ -21,15 +21,11 @@ namespace ProjectShop.Tests
             catch (NullReferenceException)
             {
 
-
                 Assert.IsTrue(true);
             }
 
-
-                
               Assert.IsTrue(true);
             }
-            
 
-        }
+    }
     }
