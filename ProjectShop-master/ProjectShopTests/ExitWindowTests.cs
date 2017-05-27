@@ -20,17 +20,16 @@ namespace ProjectShop.Tests
             }
             catch (NullReferenceException)
             {
-<<<<<<< HEAD
+
 
                 Assert.IsTrue(true);
             }
 
-=======
+
                 
               Assert.IsTrue(true);
             }
             
->>>>>>> 29a4ac4d8db0ed0daee96cabe171e9e007d91629
+
         }
     }
-}
